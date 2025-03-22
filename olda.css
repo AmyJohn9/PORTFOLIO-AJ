@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ff5733;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffe600;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    padding: 6rem 2rem;
+    border-radius: 12px;
+    margin: 6rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffe600;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Accomplishments & Certifications Section */
+#accomplishments, #certifications {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for 3 Items Per Row */
+.accomplishments-grid, .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Card Styling */
+.accomp-card, .cert-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.accomp-card img, .cert-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.accomp-card p, .cert-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.accomp-card:hover, .cert-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .accomplishments-grid, .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .accomplishments-grid, .certifications-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
